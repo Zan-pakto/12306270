@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="">
+    <div class="bg-pink-200 flex justify-center gap-4 p-3">
+      <h1 class="underline">home</h1>
+      <h2 class="underline">about us</h2>
+      <h3 class="underline cursor-pointer">CONTACT US</h3>
+    </div>
+    <div class="flex  justify-center">
+      <form action="">
+        <div class="flex flex-col border rounded-lg p-5    mt-2 gap-4">
+            <label for="name"class="font-bold">Name:</label>
+            <input type="text" id="name" name="name" class="border border-gray-300 p-2 rounded" />
+
+            <label for="password" class="font-bold">Password:</label>
+            <input type="password" id="password" name="password" class="border border-gray-300 p-2 rounded" />
+
+            <button type="submit" class="bg-blue-500 rounded-lg">
+                Submit
+            </button>
+            <script>
+                const cc = document.querySelector('h3');
+                const form = document.querySelector('form');
+                let aa = true;
+
+                cc.addEventListener('click', () => {
+                    aa = !aa;
+                    form.style.display = aa? 'block' : 'none';
+                });
+            </script>
+        </div>
+        </div>
+      </form>
+      <div class="flex mt-4">
+        <div class="size-full p-3">
+            <img src="./shh.jpg" class="">
+        </div>
+      <div class="size-full p-4 flex justify-center items-center">
+            <h1 class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius consequuntur ducimus commodi aut excepturi ratione veniam amet, recusandae rerum saepe dicta optio, magni ex voluptate non numquam fuga facere voluptatum!</h1>
+        </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam vitae inventore quos ducimus impedit. Consectetur numquam provident minima labore recusandae illo, vel soluta quo optio at cum obcaecati nesciunt omnis.</h1>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatem beatae eum, ut nihil enim velit! Enim eum consectetur est nesciunt, consequatur aut! At, vitae nemo natus ea officiis minima?</h1>
+            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo impedit ab, quis totam, magni ullam vitae iste eveniet alias eius culpa dicta dolore harum beatae. Dolore exercitationem numquam odit nesciunt?</h1>
+        </div>
+      <div class="border">
+        <div class="flex justify-between">
+            <h1>helllo</h1>
+            <h2> hello</h2>
+            <h3>hello</h3>
+            <h4>hello</h4>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
