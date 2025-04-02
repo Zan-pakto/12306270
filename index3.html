@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="relative w-[40%] h-[40vh] mx-auto mt-8 overflow-hidden">
+      <img
+        src="https://tse4.mm.bing.net/th?id=OIP.hfNK8S7ywtaPVr8WGTV4-wHaE7&pid=Api&P=0&h=180"
+        alt=""
+        class="absolute size-full slide transition duration-100"
+      />
+      <img
+        src="https://tse4.mm.bing.net/th?id=OIP.hfNK8S7ywtaPVr8WGTV4-wHaE7&pid=Api&P=0&h=180"
+        alt=""
+        class="absolute size-full slide transition duration-100"
+      />
+      <img
+        src="https://tse1.mm.bing.net/th?id=OIP._IgGc9h6kbuSmYLsRhBNvwHaEo&pid=Api&P=0&h=180"
+        alt=""
+        class="absolute size-full slide transition duration-100"
+      />
+      <img
+        src="https://tse1.mm.bing.net/th?id=OIP._IgGc9h6kbuSmYLsRhBNvwHaEo&pid=Api&P=0&h=180"
+        alt=""
+        class="absolute size-full slide transition duration-100"
+      />
+    </div>
+    <div class="flex justify-center items-center">
+      <button
+        class="border bg-green-300 p-3 text-xl rounded m-3"
+        onclick="prev()"
+      >
+        Prev
+      </button>
+      <button
+        class="border bg-green-300 p-3 text-xl rounded m-3"
+        onclick="next()"
+      >
+        Next
+      </button>
+    </div>
+    <script>
+      let slides = document.querySelectorAll(".slide");
+      console.log(slides);
+      let count = 0;
+      slides.forEach((slides, index) => {
+        slides.style.left = `${index * 100}%`;
+      });
+      function slider() {
+        slides.forEach((slides) => {
+          slides.style.transform = `translateX(-${count * 100}%)`;
+        });
+      }
+      function next() {
+        count++;
+        if (count >= slides.length) {
+          count = 0;
+        }
+        slider();
+      }
+      function prev() {
+        count--;
+        if (count < 0) {
+          count = slides.length - 1;
+        }
+        slider();
+      }
+    </script>
+  </body>
+</html>
