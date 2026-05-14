@@ -58,3 +58,7 @@ another stratergy will be in first time when user is loggin in what we can do is
 STAGE 5
 -- when hr click on notify all the notifications to the student will go in batches with parralel processing what will happen each batch will contain the user detail and the notfications details and when if the any email gets faild for the user what we will do is store that user data in an array and what we will do is again try to send the email to those user for again lets say 2 time if still fails we can simply notify the hr these students do nnot get the email please check and the data would be presisitnet fot the user who have recived notificaions
 
+STAGE 6
+the screenshot have been pasted the notficaion are gettign fetched but there is some issue in the logic i can explain it liek we can  make the poitn system for palcement we can give some points and the for result we can give littel less and gfor event we can give minium and store user id and ppoints in an array and sort them ;
+
+

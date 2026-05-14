@@ -15,6 +15,7 @@ router.post('/', async (req, res) => {
     };
     try {
         const response =await axios.post(`${ip}/evaluation-service/auth`,body||req.body);
+        console.log('Login successful:', response.data);
         return res.status(response.status ||200).json({ message: 'Login successful'},{data: response.data});
     } catch (error) {
        
