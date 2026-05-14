@@ -50,5 +50,9 @@ order BY createdAT DESC;
 ORDER BY n.created_at DESC;)
 
  
+STAGE 4 
+-- the notifications are getting fetched at every page again and again calling the db is not the right opitons what we can do is implement the redis here it will act as a mmiddelman between the client and server the notificaitons can be stored in cache using redis and if the call of the notificaion fetching goes in backend first it will intereact with redis if the data is present there it will simply the retrive the data form there and the req to the server will be less 
+OR 
+another stratergy will be in first time when user is loggin in what we can do is fetched all the notificaiton and store in localstorage so that it can fetch it form their but it can be easily acces by any user so it is also risky
 
 
