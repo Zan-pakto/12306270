@@ -55,4 +55,6 @@ STAGE 4
 OR 
 another stratergy will be in first time when user is loggin in what we can do is fetched all the notificaiton and store in localstorage so that it can fetch it form their but it can be easily acces by any user so it is also risky
 
+STAGE 5
+-- when hr click on notify all the notifications to the student will go in batches with parralel processing what will happen each batch will contain the user detail and the notfications details and when if the any email gets faild for the user what we will do is store that user data in an array and what we will do is again try to send the email to those user for again lets say 2 time if still fails we can simply notify the hr these students do nnot get the email please check and the data would be presisitnet fot the user who have recived notificaions
 
