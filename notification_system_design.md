@@ -13,12 +13,32 @@ CREATE TABLE Users (
     username VARCHAR(100) UNIQUE NOT NULL,
     is_active BOOLEAN DEFAULT TRUE
 );
-notification table we dont need to created as the frotnend devloper will directly send notficaiton if status code is 200 no need to call the backend server again
+-- Notifications Table (PostgreSQL schema)
+-- stores user notifications;
+CREATE TABLE Notifications (
+    notification_id SERIAL PRIMARY KEY,
+    user_id INT NOT NULL REFERENCES Users(user_id),
+    title VARCHAR(255),
+    message TEXT NOT NULL,
+    notification_type VARCHAR(50),
+    is_read BOOLEAN DEFAULT FALSE,
+);
+
+-- Indexes for efficient retrieval
+CREATE INDEX idx_notifications_user_id ON Notifications(user_id);
+CREATE INDEX idx_notifications_user_read_created ON Notifications(user_id, is_read, created_at DESC);
+
+--frontend can still decide to show realtime notifications
+--but persisting notifications allows history, retrie
 SQL query to fetch user by email--
 ----SELECT user_id, email, username, is_active
 ----FROM Users
 ----WHERE email = ?;
 
 
+STAGE 3
+Select * from notifications 
+where studentID=1042 AND is Read=false
+order BY createdAT DESC;
 
 
