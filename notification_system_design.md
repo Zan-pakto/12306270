@@ -40,5 +40,15 @@ STAGE 3
 Select * from notifications 
 where studentID=1042 AND is Read=false
 order BY createdAT DESC;
+ the query is accurate but it is bit slow for the large database as it uses the linear search and if the the data present it at lets say 49000 it will be very slow  the memory can be exhausted idf the server config is very low  .the indexing method is actually helpfull as it can retrive the data very fast  as we can point the data through the indexing like we want our query to run only on this part so it will be very easy
+ query to find all students who got a placement notification in the last 7 days--
+(SELECT u.user_id, u.email, u.username, n.notification_id, n.title,  n.message, n.created_at
+ FROM Users u
+ INNER JOIN Notifications n ON u.user_id =n.user_id
+ WHERE n.notification_type='placement'
+  AND n.created_at>=NOW()-INTERVAL '7 days'
+ORDER BY n.created_at DESC;)
+
+ 
 
 
